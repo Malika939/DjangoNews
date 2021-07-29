@@ -1,13 +1,11 @@
-from django.shortcuts import render, get_object_or_404, redirect
-from django.views.generic import ListView, DetailView, CreateView
-from django.urls import reverse_lazy
-from django.contrib.auth.mixins import LoginRequiredMixin
-from django.core.paginator import Paginator
+from django.shortcuts import render, redirect
+from django.views import ListView, DetailView, CreateView
+from django.contrib import LoginRequiredMixin
 from .models import News, Category
 from .forms import NewsForm, UserRegistraterForm, UserLoginForm, ContactForm
 from .utils import MyMixin
 from django.contrib import messages
-from django.contrib.auth import login, logout
+from django.contrib import login, logout
 from django.core.mail import send_mail
 
 
